@@ -1,5 +1,8 @@
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/gs-common/performance/sepolicy
 
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := sched_pixel
+
 PRODUCT_PACKAGES += dump_perf
 
 # Ensure enough free space to create zram backing device
