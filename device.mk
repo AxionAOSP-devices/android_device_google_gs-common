@@ -18,6 +18,8 @@ ifeq (,$(filter true, $(PRODUCT_WITHOUT_TTS_VOICE_PACKS)))
 include device/google/gs-common/tts/voice_packs.mk
 endif
 
+-include vendor/google/camera/config.mk
+
 HBM_SUPPORTED := true
 HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
 TORCH_STR_SUPPORTED := true
