@@ -31,6 +31,16 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.media.omx=0
 
+# frameworks/opt/net/ims/src/java/com/android/ims/ImsManager.java
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
+
+# external/ims/rcs/presencepolling/src/com/android/service/ims/presence/PollingService.java
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rcs.supported=1
+
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
