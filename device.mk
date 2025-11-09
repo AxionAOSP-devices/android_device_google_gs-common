@@ -43,6 +43,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.rcs.supported=1
 
+BOARD_KERNEL_CMDLINE += irqaffinity=0-1 rcu_nocbs=0-7 cgroup.memory=nokmem,nosocket no-steal-acc can.stats_timer=0
+
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
