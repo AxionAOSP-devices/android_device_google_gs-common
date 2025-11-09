@@ -24,6 +24,7 @@ HBM_SUPPORTED := true
 HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
 TORCH_STR_SUPPORTED := true
 TARGET_USES_SLMK := true
+TARGET_DISABLES_LIBPERF := true
 
 PRODUCT_SOONG_NAMESPACES += \
 	device/google/gs-common/powerstats
