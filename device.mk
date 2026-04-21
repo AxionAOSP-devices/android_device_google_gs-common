@@ -17,6 +17,9 @@
 PRODUCT_SOONG_NAMESPACES += \
 	device/google/gs-common/ax
 
+PRODUCT_COPY_FILES += \
+    device/google/gs-common/ax/init.ax_perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ax_perf.rc
+
 -include vendor/google/camera/config.mk
 
 HBM_SUPPORTED := true
